@@ -119,7 +119,7 @@ func main() {
 	background := load("./assets/map/118804.png")
 	playerSprites := load("./assets/sprites/spriterickmorty.png")
 
-	fps := 60
+	fps := 30
 
 	now := time.Now().UnixMilli()
 	then := now
@@ -128,7 +128,7 @@ func main() {
 		x:       100,
 		y:       200,
 		width:   40,
-		height:  72,
+		height:  68,
 		frameX:  0,
 		frameY:  2, // Cambiar el frame inicial para que mire hacia abajo
 		cyclesX: 4,
