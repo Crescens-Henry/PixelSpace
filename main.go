@@ -283,7 +283,7 @@ func main() {
 			}
 		}
 	}()
-
+	// movilidad de jugador
 	w.Canvas().SetOnTypedKey(func(k *fyne.KeyEvent) {
 		switch k.Name {
 		case fyne.KeyDown:
