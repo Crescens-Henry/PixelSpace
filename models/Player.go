@@ -1,24 +1,28 @@
 package models
 
 type Player struct {
-	x       int
-	y       int
+	x, y    int
 	width   int
 	height  int
 	frameX  int
 	frameY  int
 	cyclesX int
-	upY     int
-	downY   int
-	leftY   int
-	rightY  int
 	speed   int
 	xMov    int
 	yMov    int
 }
 
-func NewCharacter(x int, y int, width int, height int, frameX int, frameY int, cyclesX int, upY int, downY int, leftY int, rightY int, speed int, xMov int, yMov int) *Player {
-	return &Player{x: x, y: y, width: width, height: height, frameX: frameX, frameY: frameY, cyclesX: cyclesX, upY: upY, downY: downY, leftY: leftY, rightY: rightY, speed: speed, xMov: xMov, yMov: yMov}
+func NewPlayer(x, y int,
+	width int,
+	height int,
+	frameX int,
+	frameY int,
+	cyclesX int,
+	speed int,
+	xMov int,
+	yMov int) *Player {
+	return &Player{x: x, y: y, width: width, height: height, frameX: frameX, frameY: frameY, cyclesX: cyclesX, speed: speed, xMov: xMov, yMov: yMov}
+
 }
 
 func (p *Player) X() int {
@@ -75,38 +79,6 @@ func (p *Player) CyclesX() int {
 
 func (p *Player) SetCyclesX(cyclesX int) {
 	p.cyclesX = cyclesX
-}
-
-func (p *Player) UpY() int {
-	return p.upY
-}
-
-func (p *Player) SetUpY(upY int) {
-	p.upY = upY
-}
-
-func (p *Player) DownY() int {
-	return p.downY
-}
-
-func (p *Player) SetDownY(downY int) {
-	p.downY = downY
-}
-
-func (p *Player) LeftY() int {
-	return p.leftY
-}
-
-func (p *Player) SetLeftY(leftY int) {
-	p.leftY = leftY
-}
-
-func (p *Player) RightY() int {
-	return p.rightY
-}
-
-func (p *Player) SetRightY(rightY int) {
-	p.rightY = rightY
 }
 
 func (p *Player) Speed() int {
